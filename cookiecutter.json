@@ -1,23 +1,18 @@
 {
     "formal_name": "Hello World",
     "app_name": "{{ cookiecutter.formal_name|lower|replace(' ', '') }}",
+    "version": "0.0.1",
     "description": "An app that does lots of stuff",
     "author": "Jane Developer",
     "author_email": "jane@example.com",
     "bundle": "com.example",
+    "project_url": "https://example.com/{{ cookiecutter.app_name }}",
     "license": [
-        "BSD license",
         "MIT license",
-        "Apache Software License",
-        "GNU General Public License v2 (GPLv2)",
-        "GNU General Public License v2 or later (GPLv2+)",
-        "GNU General Public License v3 (GPLv3)",
-        "GNU General Public License v3 or later (GPLv3+)",
-        "Other"
-    ],
-    "gui_framework": [
-        "Toga",
-        "PySide2",
-        "None"
+        "BSD license",
+        "ISC license",
+        "Apache Software License 2.0",
+        "GNU General Public License v3",
+        "Not open source"
     ]
 }
