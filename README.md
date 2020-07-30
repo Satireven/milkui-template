@@ -1,4 +1,4 @@
-Briefcase Bootstrap template
+MilkUI template
 ============================
 
 A template for starting a [MilkUI](https://github.com/Satireven/milkui) application.
