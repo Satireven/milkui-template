@@ -1,11 +1,10 @@
 """
 {{ cookiecutter.description }}
 """
-{% set app_class_name = cookiecutter.formal_name.title().replace(' ','').replace('-','').replace('!','').replace('.','').replace(',','') -%}
 from milkui.interface.app import MilkUI
 
 
-class {{ app_class_name }}(MilkUI):
+class {{ cookiecutter.class_name }}(MilkUI):
     def __init__(self, *args, **kwargs):
         MilkUI.__init__(self, *args, **kwargs)
 
