@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+
+	<script defer src='/build/bundle.js'></script>
+</head>
+
+<body>
+	<button onclick="milk.dialog.info().then((res)=>{}).catch(e=>{document.body.innerHTML=e.message})">info</button>
+	<button onclick="milk.dialog.question().then((res)=>{}).catch(e=>{document.body.innerHTML=e.message})">question</button>
+	<button onclick="milk.dialog.confirm().then((res)=>{}).catch(e=>{document.body.innerHTML=e.message})">confirm</button>
+	<button onclick="milk.dialog.error().then((res)=>{}).catch(e=>{document.body.innerHTML=e.message})">error</button>
+	<button onclick="milk.dialog.open_file('Open File', null, null, true).then((res)=>{}).catch(e=>{document.body.innerHTML=e.message})">openFile</button>
+	<button onclick="milk.dialog.save_file('test.txt').then((res)=>{}).catch(e=>{document.body.innerHTML=e.message})">saveFile</button>
+	<button onclick="milk.dialog.select_folder().then((res)=>{milk.debug.log(res)}).catch(e=>{document.body.innerHTML=e.message})">SelectFolder</button>
+	<button onclick="milk.app.exit().then((res)=>{milk.debug.log(res)}).catch(e=>{document.body.innerHTML=e.message})">Exit</button>
+	<button onclick="milk.app.set_full_screen().then((res)=>{milk.debug.log(res)}).catch(e=>{document.body.innerHTML=e.message})">SetFullScreen</button>
+	<button onclick="milk.app.exit_full_screen().then((res)=>{milk.debug.log(res)}).catch(e=>{document.body.innerHTML=e.message})">ExitFullScreen</button>
+	<button onclick="milk.app.toggle_full_screen().then((res)=>{milk.debug.log(res)}).catch(e=>{document.body.innerHTML=e.message})">ToggleFullScreen</button>
+	<button onclick="custom();">Custom Function</button>
+	<script>
+		function custom() {
+			milk._call_api({
+				event: 'api.sayhello',
+				params: {
+					'info': 'hello world'
+				}
+			})
+		}
+
+	</script>
+
+
+	
+</body>
+</html>
